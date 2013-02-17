@@ -22,7 +22,7 @@ your shirt while you're still wearing it.
 The realization that people are so easily sold on these types of producats has always 
 eaten at me. I liked to think that I was not so easily swayed into paying for things 
 I quite clearly didn't need. But now that I'm old enough to have tangible income,
-I find myself to be the not so proud owner of an iron gym and my own sister &#8211; who
+I find myself to be the not so proud owner of an iron gym,  and my own sister &#8211; who
 I regard as intelligent and down to earth &#8211; has a magic bullet. **Maybe I'm not so 
 good at knowing when I'm being sold something I dont need.**
 
