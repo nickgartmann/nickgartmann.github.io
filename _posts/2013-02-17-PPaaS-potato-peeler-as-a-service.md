@@ -10,8 +10,8 @@ tags: ["Ideas", "Lifestyle", "Startups"]
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/As_seen_on_TV.svg/220px-As_seen_on_TV.svg.png">
 </center>
 
-In high school, I used to stay up late at night watching infomercials while I 
-did worked on homework. I'd always think to myself:
+In high school, I used to stay up late at night watching infomercials while I worked on homework. 
+I'd always think to myself:
 
 > Who would ever buy this shit?
 
