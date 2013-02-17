@@ -5,7 +5,7 @@ description: ""
 tags: ["Ideas", "Lifestyle", "Startups"]
 ---
 {% include JB/setup %}
-
+ 
 <center>
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/As_seen_on_TV.svg/220px-As_seen_on_TV.svg.png">
 </center>
