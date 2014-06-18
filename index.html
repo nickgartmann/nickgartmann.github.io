@@ -3,159 +3,92 @@
 <head>
 	<title>Nick Gartmann</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700|PT+Sans:400,700|Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
+
+		html {
+			height: 100vh;
+			margin: 0px;
 		}
 		body {
-			font-family: 'PT Serif', Georgia, serif;
-			padding: 18px;
+			font-family: 'Open Sans'
 			max-width: 880px;
 			margin: auto;
+
+			/* Wood */
+			background: url(http://31.media.tumblr.com/78624123599fc7fcb256840736f6987b/tumblr_n4vbdf0dgm1st5lhmo1_1280.jpg);
+
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			color: #FFF;
+			display: table;
+			text-shadow: 2px 2px 12px rgba(0,0,0,.9);
+		}
+		h1, h2, h3, h4 {
+			font-family: 'Open Sans';
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+		.center {
+			display: table-cell;
+			height: 100vh;
+			vertical-align: middle;
+		}
+		.center h1 {
+			font-size: 4.5em;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			line-height: .8em;
+		}
+		.tagline {
+			display: block;
+			letter-spacing: 5px
+		}
+		.contact, .contact:hover {
+			color: #FFF;
+			font-size: 1.3em;
+			font-weight: 400;
+			margin-top: 10px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
 		}
 
-		header {
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-			border-bottom: 3px solid #222;
+		@media (max-width: 610px) {
+			h1 {
+				line-height: 1em!important;
+			}
 		}
 
-		p {
-			font-size: 22px;
-			line-height: 130%;
-			margin-bottom: .5em;
-      margin-top: .5em;
+		@media (max-width: 420px) {
+			h1 {
+				font-size: 4em!important;
+			}
+			h2 {
+				font-size: 2em!important;
+			}
 		}
-		header h1,
-		header h2 {
-			line-height: 110%;
-			font-weight: normal;
-		}
-
-		header a,
-		nav a {
-			color: #222;
-			text-decoration: none;
-		}
-
-		nav a:hover,
-		nav i:hover {
-			text-decoration: none;
-		}
-
-		hr {
-			border: 1px beveled #222
-		}
-
-		.manifesto h1 {
-			margin-bottom: .2em;
-		}
-		.manifesto h2 {
-			margin-bottom: .1em;
-		}
-
-    blockquote {
-      font-family: 'PT Serif', Georgia, serif;
-      font-size: 18px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
 		::selection {
-			background-color: #0088cc;
+			background-color: #16a085;
 		}
 		::-moz-selection {
-			background-color: #0088cc;
+			background-color: #2c3e50;
 		}
-
-    nav {
-      float: right;
-      text-align: right;
-    }
-    @media(max-width:330px) {
-      nav {
-        float: none;
-        text-align: left;
-        padding-top: 0px;
-        padding: 0px;
-        margin: 0px;
-      }
-      nav h2 {
-        display: inline-block;
-        margin-right: 12px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-      body {
-        padding-top: 6px;
-      }
-    }
 	</style>
 </head>
 <body>
-	<br />
-	<header>
-		<nav>
-			<h2><a href="http://www.twitter.com/nickgartmann" rel="nofollow" target="_BLANK"><i class="icon-twitter-sign"></i></a></h2>
-			<h2 style="letter-spacing: 1px"><a href="http://www.github.com/nickgartmann" rel="nofollow" target="_BLANK"><i class="icon-github-sign"></i></a></h2>
-			<h2 style="letter-spacing: 1px"><a href="http://www.facebook.com/nickgartmann" rel="nofollow" target="_BLANK"><i class="icon-facebook-sign"></i></a></h2>
-		</nav>
+	<div class="center">
 		<h1>Nick Gartmann</h1>
-		<h2><a href="mailto:nick@rokkincat.com" target="_BLANK">nick@rokkincat.com</a></h2>
-		<h2 style="letter-spacing: 4px"><a href="tel:4143346055">(414) 334&dash;6055</a></h2>
-		
-	</header>
-	<article class="manifesto" id="manifesto">
-		<h1>Personal Manifesto</h1>
-		<section id="craftsmanship">
-			<h2>Crafstmanship</h2>
-			<p>
-				First and foremost, I will put in the necessary work to do my task to completion
-				the right way. This means learning the requisite skills, asking all of the necessary
-				questions, and cutting no corners. This means attention to detail, and not just the 
-				details that are easy to see.
-			</p>
-			<p>
-				I will take pride in the work that I do; when I cannot honestly take pride in it I will
-				re-do the work until I can. Each project I work on will be practice for the next and a to-do 
-				list for the previous.
-			</p>
-		</section>
-		<section id="pace">
-			<h2>Pace</h2>
-			<p>
-				I will take the time to do everything that must be done. I will not only focus 
-				and properly do my professional work, but also the daily tasks that must
-				be done to ensure happy living. I will wash dishes after I've used them, I will
-				keep ahead on my laundry, and I will get oil changes in my car. That which is not
-				fun &mdash; when done properly &mdash; has a tendency to leave more time for 
-				that which is.
-			</p>
-			<p>
-				I will relax. I will allow myself time to not work, and to not play. I will read &mdash;
-				in a hammock &mdash; for hours at a time.
-			</p>
-		</section>
-		<section id="learning">
-			<h2>Continuous Improvement</h2>
-			<p>
-        There is never a point in my life where I will look at my abilities and say:
-      </p>
-
-      <blockquote>
-        I am perfect, there is no more work to be done. 
-      </blockquote>	
-      <p>
-        At all points of life, there will be <em>something</em> that I could improve. I will
-        be able to articulaute to others what I am currently working on improving, whenever
-        they ask. If I feel as though I have reached a level of sufficient mastery in a 
-        particular domain, I will move on to the next; always sure to keep all of my skills
-        sharp and ready. 
-			</p>
-		</section>
-	</article>
+		<h2 class="tagline" title="I grow software applications that are good for you.">Software Farmer</h2>
+		<p>
+			<a class="contact" href="http://www.rokkincat.com">RokkinCat, LLC</a>
+		</p>
+		<p>
+			<a class="contact" href="mailto:nick@rokkincat.com">nick@rokkincat.com</a>
+		</p>
+	</div>
 </body>
 </html>
