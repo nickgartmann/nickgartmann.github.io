@@ -5,7 +5,7 @@
 	<meta name="description" content="Nick Gartmann - Software Farmer. I grow software that is good for you.">
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700|PT+Sans:400,700|Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<style>
@@ -20,14 +20,22 @@
 			margin: auto;
 
 			/* Wood */
-			background: url(wood.jpg);
+			background: url(tools.jpg);
 
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center center;
 			color: #FFF;
 			display: table;
-			text-shadow: 2px 2px 12px rgba(0,0,0,.9);
+			text-shadow: 0px 0px 6px rgba(0,0,0,.9);
+		}
+		#cover {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0,0,0,.4);
 		}
 		p {
 			font-family: 'Open Sans';
@@ -38,6 +46,7 @@
 			text-transform: uppercase;
 		}
 		.center {
+			position: relative;
 			display: table-cell;
 			height: 100vh;
 			vertical-align: middle;
@@ -55,11 +64,10 @@
 		.contact, .contact:hover {
 			color: #FFF;
 			font-size: 1.3em;
-			font-weight: 400;
+			font-weight: 700;
 			margin-top: 10px;
 			letter-spacing: 2px;
 			text-transform: uppercase;
-
 		}
 
 		@media (max-width: 610px) {
@@ -77,7 +85,7 @@
 			}
 		}
 		::selection {
-			background-color: #16a085;
+			background-color: #751D18;
 		}
 		::-moz-selection {
 			background-color: #2c3e50;
@@ -85,14 +93,18 @@
 	</style>
 </head>
 <body>
+	<div id="cover"></div>
 	<div class="center">
 		<h1>Nick Gartmann</h1>
 		<h2 class="tagline" title="I grow software that is good for you.">Software Farmer</h2>
 		<p>
-			<a class="contact" href="http://www.rokkincat.com">RokkinCat, LLC</a>
+			<a class="contact" href="http://www.rokkincat.com" target="_BLANK">RokkinCat, LLC</a>
 		</p>
 		<p>
 			<a class="contact" href="mailto:nick@rokkincat.com">nick@rokkincat.com</a>
+		</p>
+		<p>
+			<a class="contact" href="https://www.github.com/nickgartmann" target="_BLANK">Github</a>
 		</p>
 	</div>
 </body>
