@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style>
+    .races {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    } 
+    .races > div {
+      width: 400px;
+      padding: 20px;
+      margin: 20px;
+      height: 400px;
+      border: 1px solid #CCC;
+      overflow-y: auto;
+    }
+
+    .races li, .races ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .races li {
+      padding: 10px 0px;
+      border-bottom: 1px solid #ccc;
+    }
+    .races li:last-of-type {
+      border-bottom: none;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="races">
+      <div id="ga">
+        <h2>Georgia</h2>
+        <ul class="updates"><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:14 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:14 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:13 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:13 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:12 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:12 AM)</li><li>Trump +0.4 (18146) at 9:48 AM (checked at 10:11 AM)</li>
+        </ul>
+      </div>
+
+      <div id="az">
+        <h2>Arizona</h2>
+        <ul class="updates"><li>Biden +2 (68390) at 1:55 AM (checked at 10:14 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:14 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:13 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:13 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:12 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:12 AM)</li><li>Biden +2 (68390) at 1:55 AM (checked at 10:11 AM)</li>
+        </ul>
+      </div>
+      <div id="pa">
+        <h2>Pennsylvania</h2>
+        <ul class="updates"><li>Trump +2 (135626) at 9:59 AM (checked at 10:14 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:14 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:13 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:13 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:12 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:12 AM)</li><li>Trump +2 (135626) at 9:59 AM (checked at 10:11 AM)</li>
+        </ul>
+      </div>
+      <div id="nv">
+        <h2>Nevada</h2>
+        <ul class="updates"><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:14 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:14 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:13 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:13 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:12 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:12 AM)</li><li>Biden +0.6 (7647) at 4:45 AM (checked at 10:11 AM)</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var dataUrl = "https://static01.nyt.com/elections-assets/2020/data/api/2020-11-03/national-map-page/national/president.json"
+
+      var STATE_RACE = {
+        "AZ": {"index": 3, "lastData": {}},
+        "GA": {"index": 10, "lastData": {}},
+        "NC": {"index": 27, "lastData": {}},
+        "NV": {"index": 33, "lastData": {}},
+        "PA": {"index": 38, "lastData": {}}
+      }
+
+
+      var formatter = new Intl.DateTimeFormat('en-us', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true,
+          timeZone: 'America/Chicago'
+      });
+
+      var lastChecked = new Date();
+
+
+      function fetchData() {
+        return fetch(dataUrl).then(response => response.json())
+      }
+
+      function extractRace(payload, state) {
+        return payload["data"]["races"][STATE_RACE[state]["index"]];
+      }
+
+      function renderState(name, data) {
+        let trump = data["candidates"].find(c => c.candidate_id == "trump-8639");
+        let biden = data["candidates"].find(c => c.candidate_id == "biden-1036");
+        let li = document.createElement("li")
+        li.innerHTML = `${data["leader_margin_name_display"]} (${Math.abs(biden.votes - trump.votes)}) at ${formatter.format(new Date(data["last_updated"]))} (checked at ${formatter.format(new Date())})`
+        document.getElementById(name).querySelector(".updates").prepend(li)
+      }
+
+      function doit() {
+        fetchData().then(payload => {
+          renderState("ga", extractRace(payload, "GA"))
+          renderState("az", extractRace(payload, "AZ"))
+          renderState("pa", extractRace(payload, "PA"))
+          renderState("nv", extractRace(payload, "NV"))
+        })
+      }
+
+      doit();
+      setInterval(doit, 30 * 1000);
+    </script>
+  
+
+</body></html>
